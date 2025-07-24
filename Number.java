@@ -11,5 +11,4 @@ public class Number {
             System.out.println("Not an Integer");
         }  
     }
-    
 }

@@ -1,28 +1,22 @@
 public class Armstrong {
-    public static void main(String args[]){
-        int n = 153;
-        int num=n;
-        int count =0;
-        int sum=0;
+    public static void main(String[] args) {
+        int n =153;
+        int copy=n;
+        int num=0;
+        int count = 0;
         while(n!=0){
+            int d=n%10;
             count++;
-            n=n/10;
+            n/=10;
         }
-        n=num;
-        while(n>0){
-        int d=n%10;
-        int digit=(int)Math.pow(d, count);
-        sum = sum +digit;
-        n=n/10;
+        n=copy;
+        while(n!=0){
+            int d=n%10;
+            num=num+(int)Math.pow(d, count);
+            n/=10;
         }
-        if(sum==num){
-            System.out.println("Armstrong");
-        }else{
-            System.out.println(("Not Armstrong"));
-        }
-        
-
-
-    } 
+        System.out.println(num);
+        System.out.println(copy==num?"Armstrong":"Not Armstrong");
+    }
     
 }
